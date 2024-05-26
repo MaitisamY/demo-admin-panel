@@ -30,7 +30,7 @@ header {
     gap: 0;
     width: 100%;
     height: 275px;
-    background: linear-gradient(45deg, #8e44ad, #3498db, #2ecc71);
+    background: linear-gradient(45deg, #8e44ad, #3498db, #2ecc71, #09cece);
     background-size: 400% 400%;
     animation: gradient 59s ease infinite;
 }
@@ -120,6 +120,22 @@ header .level-two .box i {
     font-size: 30px;
 }
 
+header .level-two .box i.purple {
+    color: #8e44ad;
+}
+
+header .level-two .box i.green {
+    color: #2ecc71;
+}
+
+header .level-two .box i.blue {
+    color: #3498db;
+}
+
+header .level-two .box i.sea {
+    color: #09cece;
+} 
+
 header .level-two .box > div {
     width: 100%;
     display: flex;
@@ -129,12 +145,6 @@ header .level-two .box > div {
     padding: 0;
     flex-wrap: wrap;
     gap: 10px;
-}
-
-header .level-two .box > div h2 {
-    font-size: 30px;
-    font-weight: 700;
-    color: #2ecc71;
 }
 
 .responsive-nav-sider {
