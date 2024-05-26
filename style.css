@@ -60,6 +60,16 @@ header .level-one .box {
     border-radius: 25px;
 }
 
+header .level-one .box a {
+    display: none;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+}
+
 header .level-one .box h4 {
     font-size: 20px;
     font-weight: 600;
@@ -125,6 +135,10 @@ header .level-two .box > div h2 {
     font-size: 30px;
     font-weight: 700;
     color: #2ecc71;
+}
+
+.responsive-nav-sider {
+    display: none;
 }
 
 .nav-sider {
@@ -223,6 +237,10 @@ main {
     padding: 0;
 }
 
+.bar .close-btn {
+    display: none;
+}
+
 .container {
     width: 80%;
     height: auto;
@@ -265,6 +283,15 @@ main {
     }
     100% {
         background-position: 0% 50%;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
     }
 }
 
@@ -376,11 +403,49 @@ main {
     }
 
     .bar {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        margin-top: 0;
+        margin-left: 0;
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         display: none;
+        border-radius: 0;
+        animation: slideDown 0.5s ease;
+    }
+
+    .bar .close-btn {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 20px;
+        color: #000;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .nav-sider {
+        height: 100vh;
+        border-radius: 0;
     }
     
     .container {
         width: 100%;
         margin-top: 160px;
+    }
+
+    header .level-one .box h3,
+    header .level-one .box h4 {
+        display: none;
+    }
+
+    header .level-one .box a {
+        display: inline-block;
     }
 }
